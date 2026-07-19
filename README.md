@@ -34,3 +34,11 @@ The pipeline runs as a proper state machine built with LangGraph, not a chain of
 - **HuggingFace Sentence Transformers** (`all-MiniLM-L6-v2`) — local embeddings, no API calls
 - **Streamlit** — the frontend, with a custom dark-mode glassmorphism UI
 - **DuckDuckGo Search, Wikipedia, ArXiv** — the three free, keyless research sources
+
+  ## References
+
+Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+
+Lewis, P., Perez, E., Piktus, A., et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. Advances in Neural Information Processing Systems 33 (NeurIPS 2020). [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+
+Singh, A., Ehtesham, A., Kumar, S., & Khoei, T. T. (2025). *Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG*. [arXiv:2501.09136](https://arxiv.org/abs/2501.09136)
