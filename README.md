@@ -16,3 +16,11 @@ Khoj (खोज) is Hindi for "search" or "quest" — which is what felt right f
 ## **Meet the agents**
 
 The pipeline runs as a proper state machine built with LangGraph, not a chain of prompts — each agent reads from and writes to a shared state object, and the graph enforces the order they run in.
+
+| Agent | Job |
+|---|---|
+| 🧠<br>**Manager** | Breaks the user's question into 3–5 focused, independently-searchable sub-questions |
+| 🔍<br>**Web Searcher** | Runs each sub-question through DuckDuckGo and Wikipedia, then uses an LLM to extract the actual findings from the raw results |
+| 📄<br>**Paper Reader** | Searches ArXiv for relevant academic papers per sub-question and extracts structured findings — title, authors, key contribution, citation URL |
+| ✅<br>**Fact Checker** | Cross-references every claim from both agents above and assigns a confidence level: **HIGH** (3+ sources or an academic paper), **MEDIUM** (2 sources), or **LOW** (single source or contradicting sources) |
+| ✍️<br>**Writer** | Synthesizes everything into a structured Markdown report — executive summary, key findings with confidence badges, detailed analysis, academic insights, and a numbered source list |
