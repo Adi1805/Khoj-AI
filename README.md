@@ -12,3 +12,7 @@ A multi-agent research system that takes a single question and returns a fact-ch
 Ask Khoj AI something like "latest breakthroughs in fusion energy", and instead of a single LLM call producing a plausible-sounding paragraph, five agents go to work in sequence — breaking the question down, searching the live web and Wikipedia, pulling relevant academic papers from ArXiv, cross-referencing every claim across sources, and only then writing a structured report with a confidence rating attached to each finding.
 
 Khoj (खोज) is Hindi for "search" or "quest" — which is what felt right for a system built specifically to go looking for answers rather than just generating them.
+
+## **Meet the agents**
+
+The pipeline runs as a proper state machine built with LangGraph, not a chain of prompts — each agent reads from and writes to a shared state object, and the graph enforces the order they run in.
