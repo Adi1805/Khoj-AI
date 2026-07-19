@@ -24,3 +24,13 @@ The pipeline runs as a proper state machine built with LangGraph, not a chain of
 | 📄<br>**Paper Reader** | Searches ArXiv for relevant academic papers per sub-question and extracts structured findings — title, authors, key contribution, citation URL |
 | ✅<br>**Fact Checker** | Cross-references every claim from both agents above and assigns a confidence level: **HIGH** (3+ sources or an academic paper), **MEDIUM** (2 sources), or **LOW** (single source or contradicting sources) |
 | ✍️<br>**Writer** | Synthesizes everything into a structured Markdown report — executive summary, key findings with confidence badges, detailed analysis, academic insights, and a numbered source list |
+
+## Tech Stack
+
+- **LangGraph** — state machine orchestration for the 5-agent pipeline
+- **LangChain** — LLM invocation, tool wrapping, prompt templates
+- **Google Gemini** (2.5 Flash / 2.0 Flash / 2.0 Flash-Lite) — the underlying LLM, via free-tier API
+- **ChromaDB** — local vector store for semantic search over collected findings
+- **HuggingFace Sentence Transformers** (`all-MiniLM-L6-v2`) — local embeddings, no API calls
+- **Streamlit** — the frontend, with a custom dark-mode glassmorphism UI
+- **DuckDuckGo Search, Wikipedia, ArXiv** — the three free, keyless research sources
