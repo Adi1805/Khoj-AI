@@ -7,4 +7,8 @@ A multi-agent research system that takes a single question and returns a fact-ch
 <img width="146" height="26" alt="image" src="https://github.com/user-attachments/assets/b141f400-bac3-4eaf-b5e6-657e6487fd31" />
 <img width="127" height="28" alt="image" src="https://github.com/user-attachments/assets/930ef567-688a-440e-8ef4-eafa2c738ad8" />
 
+## **What this is**
 
+Ask Khoj AI something like "latest breakthroughs in fusion energy", and instead of a single LLM call producing a plausible-sounding paragraph, five agents go to work in sequence — breaking the question down, searching the live web and Wikipedia, pulling relevant academic papers from ArXiv, cross-referencing every claim across sources, and only then writing a structured report with a confidence rating attached to each finding.
+
+Khoj (खोज) is Hindi for "search" or "quest" — which is what felt right for a system built specifically to go looking for answers rather than just generating them.
